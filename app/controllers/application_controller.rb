@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
   helper_method :admin?
-  before_filter :redirect_pages_without_www
+  #before_filter :redirect_pages_without_www
   
   # Comment once is correct
   #USERNAME, PASSWORD = "admin", "test"
