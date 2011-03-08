@@ -124,11 +124,11 @@ module ActiveRecord #:nodoc:
           
           conditions << type_condition unless descends_from_active_record? 
           conditions.compact!
-          conditions = conditions.join(' AND ')
+          #conditions = conditions.join(' AND ')
           
           joins = ["INNER JOIN #{Tagging.table_name} ON #{Tag.table_name}.id = #{Tagging.table_name}.tag_id"]
           joins << "INNER JOIN #{table_name} ON #{table_name}.#{primary_key} = #{Tagging.table_name}.taggable_id"
-          joins << scope[:joins] if scope && scope[:joins]
+          #joins << scope[:joins] if scope && scope[:joins]
           
           at_least  = sanitize_sql(['COUNT(*) >= ?', options.delete(:at_least)]) if options[:at_least]
           at_most   = sanitize_sql(['COUNT(*) <= ?', options.delete(:at_most)]) if options[:at_most]
