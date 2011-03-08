@@ -11,27 +11,11 @@
 
   <p class="post_message">
     <%= f.label :intro, t('posts.intro') %> 
-		<span class="how_to_put_code">
-	    <a onclick="$('code_explanation1').appear(); this.fade();">
-				<%= t('.how_to_put_code') %>
-			</a>
-		</span>
-    <p class="how_to_put_code_explanation" id="code_explanation1" style="display:none;">
-			<%= t('.how_to_put_code_explanation') %>
-		</p>
     <%= f.text_area :intro %>
   </p>
 
   <p class="post_message">
     <%= f.label :body, t('posts.body') %> 
-		<span class="how_to_put_code">
-	    <a onclick="$('code_explanation2').appear(); this.fade();">
-				<%= t('.how_to_put_code') %>
-			</a>
-		</span>
-    <p class="how_to_put_code_explanation" id="code_explanation2" style="display:none;">
-			<%= t('.how_to_put_code_explanation') %>
-		</p>
     <%= f.text_area :body %>
   </p>
   <div style="clear:both;"></div>

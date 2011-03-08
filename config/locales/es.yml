@@ -100,7 +100,7 @@ es:
       Posts_index: Índice de posts
       Page: Página
     header:
-      subtitle: La nueva portátil de Nintendo
+      subtitle: ""
   sessions:
     new:
       login: Login
@@ -136,9 +136,9 @@ es:
       active: Publicar
   contacts:
     index:
-      contact_intro: Mi nombre es Juan de Frías. Soy un Ingeniero Superior de Telecomunicaciones especializado en Telemática con experiencia contrastada en el mundo del desarrollo web.
-      why_this_project: Este blog no es más que un proyecto personal, desarrollado integramente en Ruby on Rails, con la intención de compartir con la comunidad todo lo relacionado con el mundo de la programación en general y del desarrollo web ágil con Ruby on Rails en particular.
-      how_to_contact: Ante cualquier duda o consulta puedes contactar conmigo a través del siguiente formulario
+      contact_intro: "Esta web ha sido desarrollada por <a href='http://www.juandefrias.com'>Juan de Frías</a>, Ingeniero Superior de Telecomunicaciones especializado en Telemática partiendo de las premisas del desarrollo web ágil."
+      why_this_project: Este blog intenta poner en práctica algunos conceptos de programación relacionados con Rails 3.0 a la par de servir de medio divulgativo sobre la nueva portatil de Nintendo 3DS.
+      how_to_contact: "Si tienes alguna duda o quieres realizarme alguna consulta, puedes contactar conmigo directamente mediante el fomulario siguiente"
       name: Nombre
       site_url: Web personal
       body: Mensaje
