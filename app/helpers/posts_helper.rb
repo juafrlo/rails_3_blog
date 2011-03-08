@@ -1,5 +1,6 @@
 module PostsHelper
   def post_title(post)
+    post = Post.last
     post_page? ? post.title : link_to(post.title,post)
   end
   
