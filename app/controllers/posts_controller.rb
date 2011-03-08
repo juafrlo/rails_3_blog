@@ -20,6 +20,7 @@ class PostsController < ApplicationController
   # GET /posts/1.xml
   def show
     @post = Post.find(params[:id])
+    @post = Post.last if @post.blank?
     @comment = Comment.new
 
     respond_to do |format|
