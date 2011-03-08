@@ -10,7 +10,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110303075340) do
+ActiveRecord::Schema.define(:version => 20110308145000) do
+
+  create_table "app_configurations", :force => true do |t|
+    t.string   "environment"
+    t.string   "user"
+    t.string   "password"
+    t.string   "email"
+    t.string   "site_url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "comments", :force => true do |t|
     t.integer  "post_id"
