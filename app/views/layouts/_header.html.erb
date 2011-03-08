@@ -1,0 +1,10 @@
+<div id="header" <%= homepage? ? '' : 'class=\'t\''%>>
+	<div id="logo">
+		<% if homepage? %><h1><% end %>
+		  <%= link_to SITE_NAME, home_path, :id => 'site_name'  %><br/>
+		  <span><%= link_to t('.subtitle'), home_path %></span>
+		<% if homepage? %></h1><% end %>
+  </div>
+</div>    
+
+

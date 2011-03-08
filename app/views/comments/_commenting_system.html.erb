@@ -1,0 +1,44 @@
+<h3><%= t('.Comments') %></h3>
+<% if @post.comments.blank? %> 
+  <span id="no_comments"><%= t('.no_comments') %></span>
+<% else %>
+  <%= render @post.comments %>
+<% end %>
+<div id="newest_comment"></div>
+
+<a name="comments"><h3 id="send_new_comment"><%= t('.New_comment') %></h3></a>
+
+<% form_for @comment, :loading => "$('spinner').appear();", :remote => true do |f| %>
+   <div id="form_errors"></div>
+
+  <%= f.hidden_field :post_id, :value => @post.id %>
+  <p>
+    <span><%= f.label :name, t('.name') %></span>
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+	  <span><%= f.label :email, t('.email') %></span>
+	  <%= f.text_field :email %>
+	</p>
+
+  <p>
+	  <span><%= f.label :site_url, t('.site_url') %></span>
+	  <%= f.text_field :site_url %>
+	</p>
+	
+	<p class="extra_field">
+	  <span><%= f.label :extra_field, t('.extra_field') %></span>
+	  <%= f.text_field :extra_field %>
+  </p>
+	
+	<p>
+		<span><%= f.label :body, t('.body') %></span>
+		<%= f.text_area :body %>
+	</p>
+	
+	<p>
+		<%= f.submit t('.send'), :class => 'submit' %>
+		<%= image_tag 'spinner.gif', :id => 'spinner', :style => 'display:none;' %>
+	<p>
+<% end %>

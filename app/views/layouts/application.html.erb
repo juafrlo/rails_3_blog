@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+	<meta name="description" content="<%= page_description %>">
+	<meta http-equiv="content-language" content="es">
+  <title><%= page_title %></title>
+  <%= stylesheet_link_tag 'application' %>
+  <!--[if IE]>
+    <%= stylesheet_link_tag 'ie' %>
+  <![endif]-->
+	<!--[if gte IE 8]>
+	<%= stylesheet_link_tag 'ie8' %>
+	<![endif]-->
+  <%= javascript_include_tag :defaults, :cache => true %>
+</head>
+
+<body>
+	<div id="wrapper">
+		<% if homepage? %>
+			<%= render :partial => 'layouts/header' %>
+  	<% end %>
+    <div id="page" <%= "class='no_homepage'" unless homepage? %>>
+	    <%= flash_message %>
+		  <div id="content">
+			  <div id="post"><%= yield  %></div>
+		  </div> 
+	    <div id="sidebar">
+				<div id="ad_block_side">
+					<script type="text/javascript"><!--
+						google_ad_client = "ca-pub-6226687068928040";
+						/* Caja cuadrada derecha */
+						google_ad_slot = "7169183381";
+						google_ad_width = 250;
+						google_ad_height = 250;
+						//-->
+						</script>
+						<script type="text/javascript"
+						src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+					</script>
+				</div>
+		    <div id="search">
+				  <h3><%= t('.search_post')%></h3>
+				  <% form_tag search_posts_path, :method => :get do %>
+				    <%= text_field_tag :title %>
+				 	 <%= submit_tag t('.search') %>
+				  <% end %>
+			  </div>
+				<div id="rss">
+				  <h3><%= t('.rss')%></h3>
+				  <%= link_to image_tag('ico-rss.png', :alt => 'RSS') + " " + t('.subscribe'), 
+				    posts_path(:format => :rss) %>
+			  </div>
+        <div id="cloud">
+				  <h3><%= t('.cloud')%></h3>
+ 					<div id="cloud_block">
+  				  <% tag_cloud Post.tag_counts, %w(css1 css2 css3 css4) do |tag, css_class| %>
+	  			    <%= link_to tag.name, tag_path(tag.name), :class => css_class %>
+  	  		  <% end %>
+          </div>
+        </div>
+		  </div>
+		<div class="clear"></div>
+	  </div>	<!-- end #page -->	
+		<ul id="tabnav" <%= "class='logedd_tab'" if admin? %>>
+			<li><%= link_to t(".homepage"), home_path, tab_class("posts") %></li>
+			<li><%= link_to t(".contact"), contacts_path, tab_class("contacts") %></li>
+			<% content_tag :li do %>
+				<%= link_to t(".new_post"), new_post_path, tab_class("new_post") %>
+			<% end if admin? %>
+		</ul>
+		<% unless homepage? %>
+			<%= render :partial => 'layouts/header' %>
+		<% end %>
+  </div>
+
+  <div id="footer">
+    <p>
+      <%= t('.personal_project_of') %> <%= link_to 'Juan de Frías', contacts_path %>
+	  </p>
+  </div>
+  
+  <!-- Google Analytics -->
+		<script type="text/javascript">
+		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+		<script type="text/javascript">
+		try {
+		var pageTracker = _gat._getTracker("UA-6852766-2");
+		pageTracker._trackPageview();
+		} catch(err) {}</script>
+  
+
+</body>
+</html>
+

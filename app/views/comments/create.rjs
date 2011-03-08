@@ -1,0 +1,16 @@
+page.visual_effect :Fade, :spinner
+unless @comment.new_record?
+  page.visual_effect :Fade, :spinner
+  page.visual_effect :Fade, :send_new_comment
+  page.visual_effect :Fade, :new_comment
+  page.insert_html :bottom, "newest_comment", :partial => 'comments/comment',
+   :locals => {:comment => @comment}
+  page.visual_effect :Fade, :no_comments if @comment.post.comments.size == 1
+  page <<  "$$('.comment').last().highlight()"
+else
+   page.replace :form_errors, 
+  "<div id='form_errors'>" +
+    error_messages_for('comment', :header_message => '').to_s +
+  "</div>"
+end
+
