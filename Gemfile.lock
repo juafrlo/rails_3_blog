@@ -1,6 +1,7 @@
 GEM
   remote: http://rubygems.org/
   specs:
+    RedCloth (4.2.7)
     abstract (1.0.0)
     actionmailer (3.0.4)
       actionpack (= 3.0.4)
@@ -30,6 +31,7 @@ GEM
     activesupport (3.0.4)
     arel (2.0.9)
     builder (2.1.2)
+    coderay (0.9.7)
     columnize (0.3.2)
     erubis (2.6.6)
       abstract (>= 1.0.0)
@@ -63,6 +65,9 @@ GEM
       rake (>= 0.8.7)
       thor (~> 0.14.4)
     rake (0.8.7)
+    redclothcoderay (0.3.6)
+      RedCloth
+      coderay
     ruby-debug (0.10.4)
       columnize (>= 0.1)
       ruby-debug-base (~> 0.10.4.0)
@@ -77,7 +82,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  RedCloth
   mysql2
   pg
   rails (= 3.0.4)
+  redclothcoderay
   ruby-debug

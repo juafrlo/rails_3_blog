@@ -8,3 +8,6 @@ DESCRIPTION = "Blog de Nintendo 3DS. Noticias, vídeos, juegos y análisis de Ni
 
 # Initialize the rails application
 Blog3ds::Application.initialize!
+require 'textilizer'
+require 'RedCloth'
+require 'redclothcoderay'

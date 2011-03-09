@@ -19,7 +19,7 @@
 	<% end %>
 	
 	<div class="post_body">
-		<%= post_page? ? post.body : post.intro %>
+		<%= raw textilize post_page? ? post.body : post.intro %>
 	</div>
   <% if action_name != 'show' %>
   	<%= link_to t('.view_more'), post_path(post) %> |
