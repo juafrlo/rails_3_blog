@@ -1,5 +1,4 @@
 module ApplicationHelper
-  include TagsHelper
   
   def textilize(text)
     Textilizer.new(text).to_html unless text.blank?
