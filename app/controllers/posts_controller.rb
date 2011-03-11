@@ -7,7 +7,7 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.xml
   def index
-    @posts = Post.active.ordered.paginate :per_page => 5, :page => params[:page]                                     
+    @posts = Post.active.ordered.paginate :per_page => 6, :page => params[:page]                                     
 
     respond_to do |format|
       format.html # index.html.erb
