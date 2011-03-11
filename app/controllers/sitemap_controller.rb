@@ -1,5 +1,5 @@
 class SitemapController < ApplicationController
-  caches_page :index
+  #caches_page :index
   
   def index
     @posts = Post.ordered.active
