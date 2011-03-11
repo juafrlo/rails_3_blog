@@ -1,6 +1,6 @@
 <%= tag_h1 if tag_page? %>
 <%= render @posts %>
 
-<%= will_paginate @posts,
+<%= raw will_paginate @posts,
  :prev_label => t("paginator.previous"),
  :next_label => t("paginator.next") %>
