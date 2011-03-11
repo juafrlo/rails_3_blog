@@ -71,4 +71,8 @@ module ApplicationHelper
   def home_path
     '/'
   end  
+
+  def home_url
+    "http://#{request.host}"
+  end  
 end

@@ -16,6 +16,8 @@ Blog3ds::Application.routes.draw do
   match 'login' => 'sessions#new'
   match 'logout' => 'sessions#destroy'
   
+  match 'sitemap.xml' => 'sitemap#index'
+  
   
   
   
