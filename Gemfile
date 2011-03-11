@@ -25,6 +25,7 @@ gem 'ruby-debug'
 # gem 'aws-s3', :require => 'aws/s3'
 gem 'RedCloth'
 gem 'redclothcoderay'
+gem "will_paginate", "~> 3.0.pre2"
 
 
 # Bundle gems for the local environment. Make sure to
