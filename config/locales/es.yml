@@ -136,7 +136,7 @@ es:
       active: Publicar
   contacts:
     index:
-      contact_intro: "Esta web ha sido desarrollada por <a href='http://www.juandefrias.com'>Juan de Frías</a>, Ingeniero Superior de Telecomunicaciones especializado en Telemática partiendo de las premisas del desarrollo web ágil."
+      contact_intro: "Esta web ha sido desarrollada por <a href='http://www.juandefrias.com' rel='nofollow'>Juan de Frías</a>, Ingeniero Superior de Telecomunicaciones especializado en Telemática partiendo de las premisas del desarrollo web ágil."
       why_this_project: Este blog intenta poner en práctica algunos conceptos de programación relacionados con Rails 3.0 a la par de servir de medio divulgativo sobre la nueva portatil de Nintendo 3DS.
       how_to_contact: "Si tienes alguna duda o quieres realizarme alguna consulta, puedes contactar conmigo directamente mediante el fomulario siguiente"
       name: Nombre
