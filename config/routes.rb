@@ -9,7 +9,7 @@ Blog3ds::Application.routes.draw do
     end
   end
   
-  resources :contacts
+  resources :contacts, :path => "contacto"
   resources :tags
   
   resources :sessions
