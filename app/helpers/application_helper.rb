@@ -35,7 +35,7 @@ module ApplicationHelper
     else
       SITE_NAME
     end
-    title.include?(SITE_NAME) ? title : "#{SITE_NAME} - #{title}"
+    title.include?(SITE_NAME) ? title : "#{title} - #{SITE_NAME}"
   end
   
   def page_description
