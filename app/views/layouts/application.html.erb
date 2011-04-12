@@ -41,18 +41,21 @@
 				</div>
 		    <div id="search">
 				  <h3><%= t('.search_post')%></h3>
-					<form action="http://www.google.es/cse" id="cse-search-box">
+					<form action="http://www.google.es/cse" id="cse-search-box" target="_blank">
 					  <div>
-					    <input type="hidden" name="cx" value="partner-pub-6226687068928040:9834561324" />
+					    <input type="hidden" name="cx" value="partner-pub-6226687068928040:4458040257" />
 					    <input type="hidden" name="ie" value="UTF-8" />
-					    <input type="text" name="q" size="40" />
+					    <input type="text" name="q" size="55" />
 					    <input type="submit" name="sa" value="Buscar" />
 					  </div>
 					</form>
 
 					<script type="text/javascript" src="http://www.google.es/coop/cse/brand?form=cse-search-box&amp;lang=es"></script>
-
-
+					<script type="text/javascript" src="http://www.google.com/cse/query_renderer.js"></script>
+					<div id="queries"></div>
+					<script src="http://www.google.com/cse/api/partner-pub-6226687068928040/cse/4458040257/queries/js?oe=UTF-8&amp;callback=(new+PopularQueryRenderer(document.getElementById(%22queries%22))).render"></script>
+				
+					
 
 			  </div>
 				<div id="rss">
