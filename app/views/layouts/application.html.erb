@@ -20,7 +20,7 @@
 		<% if homepage? %>
 			<%= render :partial => 'layouts/header' %>
   	<% end %>
-    <div id="page" <%= "class='no_homepage'" unless homepage? %>>
+    <div id="page" <%= "class=no_homepage" unless homepage? %>>
 	    <%= flash_message %>
 		  <div id="content">
 			  <div id="post"><%= yield  %></div>

@@ -1,4 +1,4 @@
-<div id="header" <%= homepage? ? '' : 'class=\'t\''%>>
+<div id="header" <%= homepage? ? '' : "class=t"%>>
 	<div id="logo">
 		<% if homepage? %><h1><% end %>
 		  <%= link_to SITE_NAME, home_path, :id => 'site_name'  %><br/>
